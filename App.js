@@ -1,37 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text style={styles.waveform}>Waveform</Text>
+      </View>
       <Text style={styles.text}>SIGNUM</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridTemplateRows: '1fr 2fr repeat(2, 1fr)',
-    gridColumnGap: 0,
-    gridRowGap: 0,
     backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    div1: { gridArea: '2/1/3/2', backgroundColor: 'red' },
-    div2: { gridArea: '2 / 2 / 3 / 3', },
-    div3: { gridArea: '2 /3 / 3 / 4', },
-    
+    borderColor: 'cyan',
+    borderWidth: 2,
+    borderRadius: 50,
   },
   text: {
     color: 'cyan',
-    marginBottom: 750,
-    marginLeft: 280,
-    fontFamily: '',
-    fontStyle: 'bold',
-    },
+    width: 100,
+    marginTop: 290,
+    marginLeft: 320,
+    fontFamily: 'monospace',
+    fontStyle: 'italic',
+    transform: 'rotate(90deg)',
+  },
+  waveform: {
+    backgroundColor: 'cyan',
+    width: 600,
+    height: 150,
+    backgroundColor: 'red',
+    borderRadius: 50,
+    marginTop: 220,
+    marginRight: 30,
+    transform: 'rotate(90deg)',
   }
-)
+
+});
