@@ -4,6 +4,6 @@
 
 ## Languages: Javascript
 
-## Technologies: Expo, React-Native, Android Studio, Expo Go (mobile app)
+## Technologies: Figma, Expo, React-Native, Android Studio, Expo Go (mobile app)
 
 ## Features: Sound File uploader, Player with paus functionality, Ability to make comments on soundfile
